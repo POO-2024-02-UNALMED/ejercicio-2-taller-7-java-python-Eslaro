@@ -1,5 +1,5 @@
 public class ObjTaller7 {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Galaxia g = new Galaxia();
         Nova nova = new Nova();
         nova.tipoCuerpo1();
@@ -7,7 +7,7 @@ public class ObjTaller7 {
         ((Estrella) nova).explotar();
         g.tipoCuerpo1();
         System.out.println(g.toString());
-        
+
         ObjetoAstronomicoExtraSolar obN = (ObjetoAstronomicoExtraSolar) nova;
         System.out.println(obN instanceof ObjetoAstronomicoExtraSolar);
         System.out.println(obN instanceof Nova);
@@ -15,16 +15,17 @@ public class ObjTaller7 {
         System.out.println(obN instanceof Object);
         System.out.println(obN instanceof SuperNova);
         System.out.println(obN instanceof Galaxia);
-        
+
         ObjetoAstronomicoExtraSolar[] oa = new ObjetoAstronomicoExtraSolar[3];
         oa[0] = new Galaxia();
         oa[1] = new Nova();
         oa[2] = new SuperNova();
-        
+
         for (int i = 0; i < oa.length; i++) {
             oa[i].descripcion();
         }
-        
+        EnanaBlanca enana = new EnanaBlanca();
+        enana.agotarCombustible();
         oa[0] = oa[2];
         oa[0].descripcion();
     }
